@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: https://api.kixeye.com/.well-known/openid-configuration
+notes: 'KIXEYE publishes no public API and no developer authentication documentation. The only observable
+  authentication surface is the OpenID Connect discovery document served by the private game-services
+  backend at api.kixeye.com, captured verbatim in well-known/. This profile is derived from that document
+  only — it describes how KIXEYE signs and verifies its own player tokens, not a partner-facing auth
+  model. No authorization_endpoint or token_endpoint is advertised, so the discovery document is a
+  verification-only (JWKS publication) profile.'
+summary:
+  types:
+  - openIdConnect
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+- name: kixeye-oidc
+  type: openIdConnect
+  openIdConnectUrl: https://api.kixeye.com/.well-known/openid-configuration
+  issuer: https://api.kixeye.com
+  jwks_uri: https://api.kixeye.com/.well-known/jwks
+  response_types_supported:
+  - code
+  id_token_signing_alg_values_supported:
+  - RS256
+  claims_supported:
+  - iss
+  - aud
+  - nbf
+  - iat
+  - exp
+  sources:
+  - well-known/kixeye-openid-configuration.json
+  - well-known/kixeye-jwks.json
+jwks:
+  keys: 1
+  kty: RSA
+  alg: RS256
+  use: sig
+docs: null
