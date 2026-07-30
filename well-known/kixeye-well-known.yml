@@ -1,0 +1,60 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of KIXEYE hosts
+notes: 'www.kixeye.com is a single-page application that returns HTTP 200 with the same ~117KB HTML shell
+  for every path, including /.well-known/* and /security.txt. Those 200s are soft 404s and are recorded
+  as such (soft_404: true) — no well-known document is actually published on the web host. api.kixeye.com
+  is the only host with a real /.well-known/ surface.'
+hosts:
+- host: https://api.kixeye.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: application/json
+    file: kixeye-openid-configuration.json
+  - path: /.well-known/jwks
+    status: 200
+    content_type: application/json
+    file: kixeye-jwks.json
+    note: referenced as jwks_uri by the OpenID Connect discovery document
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://www.kixeye.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    soft_404: true
+  - path: /.well-known/openid-configuration
+    status: 200
+    soft_404: true
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    soft_404: true
+  - path: /.well-known/api-catalog
+    status: 200
+    soft_404: true
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    soft_404: true
+  - path: /security.txt
+    status: 200
+    soft_404: true
+- host: https://corp.kixeye.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+security_txt: null

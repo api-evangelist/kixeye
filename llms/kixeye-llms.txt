@@ -1,0 +1,71 @@
+# KIXEYE
+
+> KIXEYE Inc. is a video game developer and publisher founded in 2009, headquartered in Victoria, British
+> Columbia, and part of the Stillfront Group. It creates and operates massively multiplayer online
+> real-time strategy (MMORTS) live-service games for browsers, tablets, and smartphones — Battle Pirates,
+> War Commander, War Commander: Rogue Assault, and Rise of Firstborn.
+
+Important: KIXEYE publishes **no public API, no developer portal, and no API documentation**. There is
+no partner program, no OpenAPI definition, no SDK, and no sandbox. The host `api.kixeye.com` is a private
+game-services backend; the only thing it exposes publicly is an OpenID Connect discovery document and a
+JWKS used to verify KIXEYE's own player tokens. Do not present KIXEYE as an integratable API provider.
+
+## Company
+
+- [KIXEYE](https://www.kixeye.com/): player-facing site and game portal
+- [KIXEYE Corporate](https://corp.kixeye.com/): company overview, games, team, careers
+- [Support / Help Center](https://www.kixeye.com/support): player technical support, hosted on Helpshift
+- [Stillfront Group](https://www.stillfront.com/en/): parent company
+
+## Games
+
+- [Battle Pirates](https://www.kixeye.com/game/battlepirates/home): browser naval MMORTS, KIXEYE's longest-running title
+- [War Commander](https://www.kixeye.com/game/warcommander/home): browser post-apocalyptic MMORTS
+- [War Commander: Rogue Assault](https://play.google.com/store/apps/details?id=com.kixeye.wcm): 3D mobile military strategy
+- [Rise of Firstborn](https://play.google.com/store/apps/details?id=com.netmarble.war): mobile real-time tactical PVP
+
+## Open source
+
+- [KIXEYE on GitHub](https://github.com/Kixeye): 40 public repos, contact opensource@kixeye.com
+- [chassis](https://github.com/Kixeye/chassis): building blocks for cloud-native JVM services (archived 2020)
+- [kixmpp](https://github.com/Kixeye/kixmpp): high-performance XMPP server and client
+- [janus](https://github.com/Kixeye/janus): client-side load balancing Java library (archived)
+- [scout](https://github.com/Kixeye/scout): multi-backend service discovery client
+- [relax](https://github.com/Kixeye/relax): async REST client
+- [untar-to-s3](https://github.com/Kixeye/untar-to-s3): unpack a tar file straight into an S3 bucket
+
+None of these are published to a package registry — Maven Central has no `com.kixeye` group despite the
+poms declaring `com.kixeye.chassis` and `com.kixeye.kixmpp`. They are source-distribution only.
+
+## Identity surface
+
+- [OpenID Connect discovery](https://api.kixeye.com/.well-known/openid-configuration): issuer `https://api.kixeye.com`, RS256, response_types `code`
+- [JWKS](https://api.kixeye.com/.well-known/jwks): one RSA signing key
+
+No `authorization_endpoint` or `token_endpoint` is advertised — this is a verification-only profile, not
+an OAuth surface third parties can use.
+
+## Legal
+
+- [Terms of Service](https://corp.kixeye.com/tos.html) (last updated 2023-03-17)
+- [Privacy Policy](https://corp.kixeye.com/pp.html) (last updated 2023-06-23; contacts privacy@kixeye.com, dpo@kixeye.com)
+- [Cookie Policy](https://corp.kixeye.com/cookie-policy.html)
+- [California Privacy Rights](https://corp.kixeye.com/ca-privacy-rights.html)
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/apis.yml)
+- well-known/kixeye-well-known.yml — the probed `/.well-known/` surface across all KIXEYE hosts
+- authentication/kixeye-authentication.yml — the OIDC verification profile
+- packages/kixeye-packages.yml — first-party open source, none registry-published
+- conformance/kixeye-conformance.yml — standards conformance derived from the OIDC document
+- lifecycle/kixeye-lifecycle.yml — product and open-source lifecycle; no API versioning or status page
+- security/kixeye-domain-security.yml — probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC
+
+## Not published (probed 2026-07-19)
+
+No `security.txt`, no vulnerability disclosure or bug bounty program, no trust center, no SOC 2 / ISO
+27001 / PCI DSS claims, no status page, no changelog, no CLI, no MCP server, no AsyncAPI or webhook
+catalog, no Postman collection, no pricing or sign-up page for developers. `www.kixeye.com` is a
+single-page application that answers HTTP 200 with the same HTML shell for every path, so 200s from it
+must not be read as a page existing.

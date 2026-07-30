@@ -1,0 +1,59 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.kixeye.com/, https://corp.kixeye.com/, https://github.com/Kixeye
+notes: 'KIXEYE runs live-service games, not an API program. There is no API versioning policy, no
+  deprecation policy, no Sunset/Deprecation header contract, no SLA, and no status page — probes for
+  status.kixeye.com, developer.kixeye.com and docs.kixeye.com do not resolve in DNS. No StatusPage or
+  Deprecation pointer is emitted, because neither exists. What lifecycle signal does exist is at the
+  product and open-source level and is recorded below.'
+versioning:
+  scheme: null
+  current: null
+  docs: null
+deprecation:
+  policy_url: null
+  sunset_header: false
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+deprecated_operations: []
+product_lifecycle:
+  live_titles:
+  - name: 'War Commander: Rogue Assault'
+    platforms:
+    - ios
+    - android
+    url: https://play.google.com/store/apps/details?id=com.kixeye.wcm
+  - name: Battle Pirates
+    platforms:
+    - browser
+    - facebook
+    url: https://www.kixeye.com/game/battlepirates/home
+  - name: War Commander
+    platforms:
+    - browser
+    - facebook
+    url: https://www.kixeye.com/game/warcommander/home
+  - name: Rise of Firstborn
+    platforms:
+    - ios
+    - android
+    url: https://play.google.com/store/apps/details?id=com.netmarble.war
+open_source_lifecycle:
+  archived_repos:
+  - chassis
+  - janus
+  - chassis-java-service-template
+  - chassis-scala-service-template
+  - kixeye.github.io
+  note: the core chassis microservice framework was archived in 2020; most first-party repos have had
+    no push since 2017-2021
+corporate:
+  founded: 2009
+  headquarters: Victoria, British Columbia, Canada
+  parent: Stillfront Group
+  parent_url: https://www.stillfront.com/en/
+legal_document_dates:
+  terms_of_service_last_updated: '2023-03-17'
+  privacy_policy_last_updated: '2023-06-23'

@@ -1,0 +1,88 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Kixeye
+notes: 'KIXEYE publishes no public API and therefore no client SDKs. Its GitHub organization (40 public
+  repos, contact opensource@kixeye.com) carries first-party open-source *infrastructure* libraries it
+  built for its own cloud game services — not client libraries for a KIXEYE API. Registry probes on
+  2026-07-19 found nothing published: Maven Central has no com.kixeye group (repo1.maven.org/maven2/com/kixeye
+  returns 404) even though the poms declare com.kixeye.chassis / com.kixeye.kixmpp; npm, PyPI, RubyGems,
+  NuGet, crates.io and Packagist have no KIXEYE-owned packages. These libraries are source-distribution
+  only. No SDKs pointer is emitted, because none of these are API client libraries.'
+registries_probed:
+- registry: maven-central
+  query: g:com.kixeye* / com/kixeye/
+  result: none
+- registry: npm
+  query: kixeye
+  result: none
+- registry: pypi
+  query: kixeye, untar-to-s3
+  result: none
+- registry: rubygems
+  result: none
+- registry: nuget
+  result: none
+- registry: crates.io
+  result: none
+- registry: packagist
+  result: none
+packages: []
+source_libraries:
+- name: chassis
+  language: java
+  official: true
+  archived: true
+  declared_group_id: com.kixeye.chassis
+  published_to_registry: false
+  url: https://github.com/Kixeye/chassis
+  description: A suite of libraries which provide building blocks for creating cloud native services.
+- name: kixmpp
+  language: java
+  official: true
+  archived: false
+  declared_group_id: com.kixeye.kixmpp
+  published_to_registry: false
+  url: https://github.com/Kixeye/kixmpp
+  description: A high-performance XMPP server and client implementation.
+- name: janus
+  language: java
+  official: true
+  archived: true
+  published_to_registry: false
+  url: https://github.com/Kixeye/janus
+  description: Client-side load balancing Java library.
+- name: scout
+  language: java
+  official: true
+  archived: false
+  published_to_registry: false
+  url: https://github.com/Kixeye/scout
+  description: A discovery client that can access multiple discovery services.
+- name: relax
+  language: java
+  official: true
+  archived: false
+  published_to_registry: false
+  url: https://github.com/Kixeye/relax
+  description: An async REST client.
+- name: untar-to-s3
+  language: python
+  official: true
+  archived: false
+  published_to_registry: false
+  url: https://github.com/Kixeye/untar-to-s3
+  description: Script to unpack a tar file to an S3 bucket.
+- name: chassis-java-service-template
+  language: java
+  official: true
+  archived: true
+  published_to_registry: false
+  url: https://github.com/Kixeye/chassis-java-service-template
+  description: Java template application demonstrating the KIXEYE chassis framework.
+- name: chassis-scala-service-template
+  language: scala
+  official: true
+  archived: true
+  published_to_registry: false
+  url: https://github.com/Kixeye/chassis-scala-service-template
+  description: Scala template application demonstrating the KIXEYE chassis framework.
