@@ -1,24 +1,92 @@
 aid: kixeye
 name: Kixeye
-description: 'Kixeye is a company surfaced as a portfolio company of trinity-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: gaming. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: 'KIXEYE Inc. is a video game developer and publisher founded in 2009 and headquartered in
+  Victoria, British Columbia, with staff across Canada and the United States. KIXEYE creates, develops,
+  and publishes massively multiplayer online real-time strategy (MMORTS) games for browsers, tablets,
+  and smartphones, including Battle Pirates, War Commander, War Commander: Rogue Assault, and Rise of
+  Firstborn. An early innovator in the free-to-play genre, KIXEYE operates long-lived live-service game
+  worlds with monthly events, alliances, and competitive leaderboards for millions of players worldwide.
+  KIXEYE is part of the Stillfront Group. KIXEYE publishes no public developer program or partner API;
+  its api.kixeye.com host is a private game-services backend that exposes an OpenID Connect discovery
+  document and JWKS for token verification. The company does maintain a public GitHub organization of
+  open-source infrastructure libraries (chassis, kixmpp, janus, scout) used to build its own cloud
+  services.'
 url: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.kixeye.com/modules/footer/images/logo.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - trinity-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-api-program: none-public
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Gaming
+- Video Games
+- Game Development
+- Mobile Games
+- Strategy Games
+- Free To Play
+- Live Service
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: Website
+  url: https://www.kixeye.com/
+- type: About
+  url: https://corp.kixeye.com/
+- type: Support
+  url: https://www.kixeye.com/support
+- type: GitHubOrganization
+  url: https://github.com/Kixeye
+- type: TermsOfService
+  url: https://corp.kixeye.com/tos.html
+- type: PrivacyPolicy
+  url: https://corp.kixeye.com/pp.html
+- type: CookiePolicy
+  url: https://corp.kixeye.com/cookie-policy.html
+- type: Legal
+  url: https://corp.kixeye.com/legal.html
+- type: Careers
+  url: https://corp.kixeye.com/#careers
+- type: WellKnown
+  url: well-known/kixeye-well-known.yml
+- type: OpenIDConnect
+  url: well-known/kixeye-openid-configuration.json
+- type: Authentication
+  url: authentication/kixeye-authentication.yml
+- type: Packages
+  url: packages/kixeye-packages.yml
+- type: DomainSecurity
+  url: security/kixeye-domain-security.yml
+- type: Conformance
+  url: conformance/kixeye-conformance.yml
+- type: Lifecycle
+  url: lifecycle/kixeye-lifecycle.yml
+- type: LLMsTxt
+  url: llms/kixeye-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
