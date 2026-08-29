@@ -12,6 +12,17 @@ description: 'KIXEYE Inc. is a video game developer and publisher founded in 200
   open-source infrastructure libraries (chassis, kixmpp, janus, scout) used to build its own cloud
   services.'
 url: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
